@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 40%;
+            margin-bottom: 30px;
+        }
+        .blue{
+            background-color: blue;
+            color: yellow;
+        }
+        .yellow{
+            background-color: yellow;
+            color: blue;
+        }
+
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <p class="blue" id="yazi">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque laborum laudantium hic reprehenderit esse id a
+        iure tenetur qui cumque nobis vero magni accusantium natus, earum culpa molestias unde consequuntur corrupti!
+        Rem veritatis repellat explicabo dolores labore dolor iusto ipsam vero! Nihil illo fuga numquam eum dicta
+        aperiam quas accusantium.</p>
+
+        <button onclick="change()" class="yellow" id="btn">tıkla</button>
+    </div>
+
+    <script>
+        const yaziEl = document.querySelector("#yazi");
+        const btnEl = document.querySelector("#btn")
+        let mode = true;
+
+        function change(){
+          
+            if(mode){
+                yaziEl.classList.remove("blue")
+                yaziEl.classList.add("yellow")
+                btnEl.classList.remove("yellow")
+                btnEl.classList.add("blue")
+               
+            }
+            else{
+                yaziEl.classList.remove("yellow")
+                yaziEl.classList.add("blue")
+                btnEl.classList.remove("blue")
+                btnEl.classList.add("yellow")
+            
+            }
+            mode = !mode;
+        }
+
+    </script>
+</body>
+
+</html>
